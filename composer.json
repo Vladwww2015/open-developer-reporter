@@ -1,0 +1,30 @@
+{
+    "name": "open-developer-ext/reporter",
+    "description": "Exception reporter for laravel",
+    "type": "library",
+    "keywords": ["open-developer", "exception", "reporter"],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0.0",
+        "laravel/framework": ">=7.0",
+        "open-developer/open-developer": ">=1.0.4",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=6.0",
+        "laravel/laravel": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OpenDeveloper\\Developer\\Reporter\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OpenDeveloper\\Developer\\Reporter\\ReporterServiceProvider"
+            ]
+
+        }
+    }
+}
