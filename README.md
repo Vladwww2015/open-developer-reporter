@@ -9,17 +9,17 @@ Exception reporter for Open-Developer
 ## Installation
 
 ```
-$ composer require open-developer/reporter
+composer require open-developer/reporter
 ```
 
 ```
-$ php artisan vendor:publish --tag=open-developer-reporter
+php artisan vendor:publish --tag=open-developer-reporter
 ```
 ```
-$ php artisan migrate --path=vendor/open-developer-ext/reporter/database/migrations
+php artisan migrate --path=vendor/open-developer-ext/reporter/database/migrations
 ```
 ```
-$ php artisan developer:import reporter
+php artisan developer:import reporter
 ```
 
 Open `app/Exceptions/Handler.php`,
