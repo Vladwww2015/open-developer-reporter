@@ -10,11 +10,15 @@ Exception reporter for Open-Developer
 
 ```
 $ composer require open-developer/reporter
+```
 
+```
 $ php artisan vendor:publish --tag=open-developer-reporter
-
+```
+```
 $ php artisan migrate --path=vendor/open-developer-ext/reporter/database/migrations
-
+```
+```
 $ php artisan developer:import reporter
 ```
 
