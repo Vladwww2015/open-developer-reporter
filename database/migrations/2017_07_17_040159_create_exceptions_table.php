@@ -41,7 +41,7 @@ class CreateExceptionsTable extends Migration
 
         $table = config('developer.extensions.reporter.table', 'laravel_exceptions');
 
-        if(!Schema::hasTable($table)) {
+        if(!Schema::connection($connection)->hasTable($table)) {
             Schema::connection($connection)->create($table, function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('type', 255);
