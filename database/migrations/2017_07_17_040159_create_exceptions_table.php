@@ -41,23 +41,26 @@ class CreateExceptionsTable extends Migration
 
         $table = config('developer.extensions.reporter.table', 'laravel_exceptions');
 
-        Schema::connection($connection)->create($table, function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('type', 255);
-            $table->string('code');
-            $table->string('message', 255);
-            $table->string('file', 255);
-            $table->integer('line');
-            $table->text('trace');
-            $table->string('method');
-            $table->string('path', 255);
-            $table->text('query');
-            $table->text('body');
-            $table->text('cookies');
-            $table->text('headers');
-            $table->string('ip');
-            $table->timestamps();
-        });
+        if(!Schema::hasTable($table)) {
+            Schema::connection($connection)->create($table, function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('type', 255);
+                $table->string('code');
+                $table->string('message', 255);
+                $table->string('file', 255);
+                $table->integer('line');
+                $table->text('trace');
+                $table->string('method');
+                $table->string('path', 255);
+                $table->text('query');
+                $table->text('body');
+                $table->text('cookies');
+                $table->text('headers');
+                $table->string('ip');
+                $table->timestamps();
+            });
+
+        }
     }
 
     /**
