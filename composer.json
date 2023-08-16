@@ -1,5 +1,5 @@
 {
-    "name": "open-developer/reporter",
+    "name": "open-developer-ext/reporter",
     "description": "Exception reporter for laravel",
     "type": "library",
     "keywords": ["open-developer", "exception", "reporter"],
